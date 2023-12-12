@@ -1,6 +1,7 @@
 package net.jonathan.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.jonathan.tutorialmod.block.ModBlocks;
 import net.jonathan.tutorialmod.item.ModCreativeModeTabs;
 import net.jonathan.tutorialmod.item.ModItems;
 import net.minecraft.client.Minecraft;
@@ -35,6 +36,7 @@ public class TutorialMod
 
         ModItems.register(modEventBus); // links items with the main class.
         ModCreativeModeTabs.register(modEventBus); // links the creative mode tab with the main class
+        ModBlocks.register(modEventBus); // links the modded blocks to the main class
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
